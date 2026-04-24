@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap');
+
+/* ─── Aumatic.AI Exact Color System ─────────────────────────── */
+:root {
+  /* Backgrounds — warm creamy beige exactly as site */
+  --bg:           #F5EFE8;
+  --bg-alt:       #EDE4D8;
+  --bg-dark:      #EAE0D3;
+  --bg-card:      #EDE4D8;
+
+  /* Accent — terracotta / burnt orange */
+  --accent:       #C2622D;
+  --accent-light: #D4784A;
+  --accent-muted: #E8C4A8;
+  --accent-pale:  #F0DDD0;
+
+  /* Text */
+  --text:         #1A0F0A;
+  --text-mid:     #3D2314;
+  --text-muted:   #8A6A5A;
+  --text-dim:     #B89A88;
+
+  /* Dark section (Impact) */
+  --dark-bg:      #2C1810;
+  --dark-bg2:     #3D2314;
+
+  /* Borders */
+  --border:       rgba(194,98,45,0.15);
+  --border-card:  rgba(194,98,45,0.12);
+
+  /* Fonts */
+  --font-sans:    'Inter', system-ui, sans-serif;
+  --font-serif:   'Playfair Display', 'Georgia', serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Noise texture for warmth */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--bg-alt); }
+::-webkit-scrollbar-thumb  { background: rgba(194,98,45,0.4); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+::selection { background: rgba(194,98,45,0.25); color: var(--text); }
+
+/* Top accent bar */
+body::after {
+  content: '';
+  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 200; pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--accent-light), var(--accent), var(--text-mid), transparent);
+  opacity: 0.7;
+}
+
+/* ─── Typography ─────────────────────────────────────────────── */
+.font-serif { font-family: var(--font-serif); }
+
+.label {
+  font-size: 11px; font-weight: 700; letter-spacing: 3.5px;
+  text-transform: uppercase; color: var(--accent);
+}
+
+/* ─── Cards ──────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  transition: box-shadow 0.3s, transform 0.25s;
+}
+.card:hover {
+  box-shadow: 0 16px 50px rgba(194,98,45,0.12);
+  transform: translateY(-3px);
+}
+
+/* ─── Tag pills ──────────────────────────────────────────────── */
+.tag {
+  display: inline-flex; align-items: center;
+  font-size: 12px; font-weight: 500; color: var(--text-mid);
+  background: rgba(194,98,45,0.08); border: 1px solid rgba(194,98,45,0.15);
+  padding: 5px 13px; border-radius: 99px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+.section-pad { padding: 96px clamp(16px,4vw,40px); }
+@media (max-width: 768px) { .section-pad { padding: 64px clamp(16px,4vw,24px); } }
+@media (max-width: 480px) { .section-pad { padding: 48px 16px; } }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+
+@media (max-width: 1024px) { .grid-3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px)  {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .hide-mobile { display: none !important; }
+}
+@media (min-width: 769px) { .show-mobile { display: none !important; } }
+
+/* ─── Orb animations ─────────────────────────────────────────── */
+@keyframes orb1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(40px,-30px)} }
+@keyframes orb2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-30px,40px)} }
+@keyframes orb3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(25px,35px)} }
+.orb1 { animation: orb1 14s ease-in-out infinite; }
+.orb2 { animation: orb2 18s ease-in-out infinite; }
+.orb3 { animation: orb3 22s ease-in-out infinite; }
