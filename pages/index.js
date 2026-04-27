@@ -10,7 +10,6 @@ import WhyUs         from '../components/WhyUs'
 import Impact        from '../components/Impact'
 import CaseStudies   from '../components/CaseStudies'
 import Testimonials  from '../components/Testimonials'
-import Contact       from '../components/Contact'
 import Footer       from '../components/Footer'
 import StickyCTA      from '../components/StickyCTA'
 import WhatsAppFloat  from '../components/WhatsAppFloat'
@@ -75,7 +74,6 @@ export default function Home() {
             <CaseStudies/>
             <Testimonials/>
             <Impact/>
-            <Contact/>
           </main>
           <Footer/>
           <StickyCTA/>
