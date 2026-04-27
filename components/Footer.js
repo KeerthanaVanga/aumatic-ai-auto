@@ -8,10 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:16 }}>
-              <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
-                <path d="M16 2C16 2 8 10 8 18C8 22.4 11.6 26 16 26C20.4 26 24 22.4 24 18C24 14 20 10 20 10C20 10 19 14 16 16C13 14 12 10 12 10C12 10 16 6 16 2Z" fill="#C2622D"/>
-                <path d="M16 16C14 16 12 17.5 12 20C12 22.2 13.8 24 16 24C18.2 24 20 22.2 20 20C20 17.5 18 16 16 16Z" fill="#E8A87C"/>
-              </svg>
+              <img src="/aumatic_img.png" width="32" height="32" alt="Aumatic.AI" style={{ display: 'block', objectFit: 'contain', mixBlendMode: 'screen' }}/>
               <span style={{ fontSize:18, fontWeight:900, color:'#F5EFE8', letterSpacing:-0.5, fontFamily:"'Playfair Display',serif" }}>Aumatic.<span style={{ color:'#C2622D' }}>AI</span></span>
             </div>
             <p style={{ fontSize:14, color:'rgba(245,239,232,0.45)', lineHeight:1.75, maxWidth:270, marginBottom:24 }}>

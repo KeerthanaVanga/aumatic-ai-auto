@@ -6,12 +6,15 @@ import Navbar       from '../components/Navbar'
 import Hero         from '../components/Hero'
 import LogoBar      from '../components/LogoBar'
 import Process      from '../components/Process'
-import Capabilities from '../components/Capabilities'
-import WhyUs        from '../components/WhyUs'
-import Impact       from '../components/Impact'
-import Contact      from '../components/Contact'
+import Capabilities  from '../components/Capabilities'
+import WhyUs         from '../components/WhyUs'
+import Impact        from '../components/Impact'
+import CaseStudies   from '../components/CaseStudies'
+import Testimonials  from '../components/Testimonials'
+import Contact       from '../components/Contact'
 import Footer       from '../components/Footer'
-import StickyCTA    from '../components/StickyCTA'
+import StickyCTA      from '../components/StickyCTA'
+import WhatsAppFloat  from '../components/WhatsAppFloat'
 
 function Loader({ onDone }) {
   useEffect(()=>{ const t=setTimeout(onDone,2000); return ()=>clearTimeout(t) },[])
@@ -22,10 +25,7 @@ function Loader({ onDone }) {
       <div style={{position:'absolute',bottom:'20%',right:'20%',width:300,height:300,borderRadius:'50%',background:'radial-gradient(circle,rgba(194,98,45,0.15) 0%,transparent 65%)',pointerEvents:'none'}}/>
       <motion.div initial={{scale:0.8,opacity:0}} animate={{scale:1,opacity:1}} transition={{duration:0.5,ease:[0.22,1,0.36,1]}}
         style={{display:'flex',alignItems:'center',gap:10}}>
-        <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-          <path d="M16 2C16 2 8 10 8 18C8 22.4 11.6 26 16 26C20.4 26 24 22.4 24 18C24 14 20 10 20 10C20 10 19 14 16 16C13 14 12 10 12 10C12 10 16 6 16 2Z" fill="#C2622D"/>
-          <path d="M16 16C14 16 12 17.5 12 20C12 22.2 13.8 24 16 24C18.2 24 20 22.2 20 20C20 17.5 18 16 16 16Z" fill="#E8A87C"/>
-        </svg>
+        <img src="/aumatic_img.png" width="52" height="52" alt="Aumatic.AI" style={{ display: 'block', objectFit: 'contain' }}/>
         <span style={{fontSize:26,fontWeight:900,letterSpacing:-1,color:'#1A0F0A',fontFamily:"'Playfair Display',serif"}}>
           Aumatic.<span style={{color:'#C2622D'}}>AI</span>
         </span>
@@ -58,7 +58,7 @@ export default function Home() {
         <title>Aumatic.AI — AI Automation Agency</title>
         <meta name="description" content="We Build & Deploy Intelligent Automation for Your Business. Save hundreds of hours every month with custom AI workflows."/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>"/>
+        <link rel="icon" href="/aumatic_favicon.png"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet"/>
@@ -74,11 +74,14 @@ export default function Home() {
             <Process/>
             <Capabilities/>
             <WhyUs/>
+            <CaseStudies/>
+            <Testimonials/>
             <Impact/>
             <Contact/>
           </main>
           <Footer/>
           <StickyCTA/>
+          <WhatsAppFloat/>
         </div>
       )}
     </>

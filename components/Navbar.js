@@ -1,16 +1,25 @@
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const links = [
-  { label: 'Process',      href: '#process' },
-  { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Why Us',       href: '#why-us' },
-  { label: 'Impact',       href: '#impact' },
+const NAV_LINKS = [
+  { label: 'Process',      hash: 'process'       },
+  { label: 'Capabilities', hash: 'capabilities'  },
+  { label: 'Why Us',       hash: 'why-us'        },
+  { label: 'Case Studies', hash: 'case-studies'  },
+  { label: 'Impact',       hash: 'impact'        },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open,     setOpen]     = useState(false)
+  const router = useRouter()
+  const isHome = router.pathname === '/'
+
+  const links = NAV_LINKS.map(l => ({
+    label: l.label,
+    href:  isHome ? `#${l.hash}` : `/#${l.hash}`,
+  }))
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20)
@@ -32,11 +41,8 @@ export default function Navbar() {
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 clamp(16px,3vw,32px)', height: 68, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
         {/* ── Logo – exact flame + Aumatic.AI ── */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <path d="M16 2C16 2 8 10 8 18C8 22.4 11.6 26 16 26C20.4 26 24 22.4 24 18C24 14 20 10 20 10C20 10 19 14 16 16C13 14 12 10 12 10C12 10 16 6 16 2Z" fill="#C2622D"/>
-            <path d="M16 16C14 16 12 17.5 12 20C12 22.2 13.8 24 16 24C18.2 24 20 22.2 20 20C20 17.5 18 16 16 16Z" fill="#E8A87C"/>
-          </svg>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
+          <img src="/aumatic_img.png" width="32" height="32" alt="Aumatic.AI" style={{ display: 'block', objectFit: 'contain' }}/>
           <span style={{ fontSize: 19, fontWeight: 900, letterSpacing: -0.5, color: '#1A0F0A', fontFamily: "'Playfair Display', serif" }}>
             Aumatic.<span style={{ color: '#C2622D' }}>AI</span>
           </span>
@@ -54,7 +60,7 @@ export default function Navbar() {
 
         {/* ── CTA + hamburger ── */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <motion.a href="#contact" whileHover={{ scale: 1.04, y: -1 }} whileTap={{ scale: 0.97 }}
+          <motion.a href={isHome ? '#contact' : '/#contact'} whileHover={{ scale: 1.04, y: -1 }} whileTap={{ scale: 0.97 }}
             style={{ padding: '11px 24px', borderRadius: 10, fontSize: 15, fontWeight: 700, background: 'linear-gradient(135deg,#C2622D,#A8501F)', color: 'white', textDecoration: 'none', boxShadow: '0 4px 18px rgba(194,98,45,0.38)', whiteSpace: 'nowrap' }}>
             Book a Call
           </motion.a>
@@ -88,7 +94,7 @@ export default function Navbar() {
                   onMouseLeave={e => e.target.style.color = '#3D2314'}
                 >{l.label}</a>
               ))}
-              <a href="#contact" onClick={() => setOpen(false)}
+              <a href={isHome ? '#contact' : '/#contact'} onClick={() => setOpen(false)}
                 style={{ display: 'block', marginTop: 16, padding: '14px', borderRadius: 12, textAlign: 'center', background: 'linear-gradient(135deg,#C2622D,#A8501F)', color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: 16 }}>
                 Book a Free Consultation →
               </a>
