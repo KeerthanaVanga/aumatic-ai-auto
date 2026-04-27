@@ -33,7 +33,7 @@ export default function WhyUs() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(44px,6vw,72px)' }}>
           <span className="label">Why Aumatic</span>
-          <h2 style={{ fontSize:'clamp(28px,5vw,60px)', fontWeight:900, letterSpacing:-2, color:'#1A0F0A', margin:'14px 0 16px', fontFamily:"'Playfair Display',serif" }}>
+          <h2 style={{ fontSize:'clamp(28px,5vw,60px)', fontWeight:900, letterSpacing:-2, color:'#1A0F0A', margin:'14px 0 16px', fontFamily:"'Montserrat', sans-serif" }}>
             Built Different. Proven Results.
           </h2>
           <p style={{ fontSize:'clamp(15px,1.8vw,17px)', color:'#5C3D2A', maxWidth:540, margin:'0 auto', lineHeight:1.65 }}>
@@ -55,7 +55,7 @@ export default function WhyUs() {
                   {r.icon}
                 </div>
                 <div>
-                  <h3 style={{ fontSize:'clamp(17px,2vw,20px)', fontWeight:800, color:'#1A0F0A', marginBottom:10, letterSpacing:-0.3, fontFamily:"'Playfair Display',serif" }}>{r.title}</h3>
+                  <h3 style={{ fontSize:'clamp(17px,2vw,20px)', fontWeight:800, color:'#1A0F0A', marginBottom:10, letterSpacing:-0.3, fontFamily:"'Montserrat', sans-serif" }}>{r.title}</h3>
                   <p style={{ fontSize:15, color:'#5C3D2A', lineHeight:1.72 }}>{r.desc}</p>
                 </div>
               </motion.div>

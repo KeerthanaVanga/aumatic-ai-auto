@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:16 }}>
               <img src="/aumatic_img.png" width="32" height="32" alt="Aumatic.AI" style={{ display: 'block', objectFit: 'contain', mixBlendMode: 'screen' }}/>
-              <span style={{ fontSize:18, fontWeight:900, color:'#F5EFE8', letterSpacing:-0.5, fontFamily:"'Playfair Display',serif" }}>Aumatic.<span style={{ color:'#C2622D' }}>AI</span></span>
+              <span style={{ fontSize:18, fontWeight:900, color:'#F5EFE8', letterSpacing:-0.5, fontFamily:"'Montserrat', sans-serif" }}>Aumatic.<span style={{ color:'#C2622D' }}>AI</span></span>
             </div>
             <p style={{ fontSize:14, color:'rgba(245,239,232,0.45)', lineHeight:1.75, maxWidth:270, marginBottom:24 }}>
               We build & deploy intelligent automation for forward-thinking businesses. Save hundreds of hours every month.

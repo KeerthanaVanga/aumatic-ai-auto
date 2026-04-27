@@ -43,7 +43,7 @@ export default function Navbar() {
         {/* ── Logo – exact flame + Aumatic.AI ── */}
         <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
           <img src="/aumatic_img.png" width="32" height="32" alt="Aumatic.AI" style={{ display: 'block', objectFit: 'contain' }}/>
-          <span style={{ fontSize: 19, fontWeight: 900, letterSpacing: -0.5, color: '#1A0F0A', fontFamily: "'Playfair Display', serif" }}>
+          <span style={{ fontSize: 19, fontWeight: 900, letterSpacing: -0.5, color: '#1A0F0A', fontFamily: "'Montserrat', sans-serif" }}>
             Aumatic.<span style={{ color: '#C2622D' }}>AI</span>
           </span>
         </a>

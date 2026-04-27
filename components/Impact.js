@@ -25,7 +25,7 @@ export default function Impact() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(44px,6vw,72px)' }}>
           <span style={{ fontSize:11, fontWeight:700, letterSpacing:3.5, textTransform:'uppercase', color:'#D4784A' }}>Impact</span>
-          <h2 style={{ fontSize:'clamp(28px,5vw,60px)', fontWeight:900, letterSpacing:-2, color:'#F5EFE8', margin:'14px 0 16px', fontFamily:"'Playfair Display',serif", lineHeight:1.1 }}>
+          <h2 style={{ fontSize:'clamp(28px,5vw,60px)', fontWeight:900, letterSpacing:-2, color:'#F5EFE8', margin:'14px 0 16px', fontFamily:"'Montserrat', sans-serif", lineHeight:1.1 }}>
             We Find Constraints,<br />Then Crush Them
           </h2>
           <p style={{ fontSize:'clamp(15px,1.8vw,17px)', color:'rgba(245,239,232,0.6)', maxWidth:520, margin:'0 auto', lineHeight:1.65 }}>

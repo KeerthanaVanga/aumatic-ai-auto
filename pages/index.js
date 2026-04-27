@@ -24,7 +24,7 @@ function Loader({ onDone }) {
       <motion.div initial={{scale:0.8,opacity:0}} animate={{scale:1,opacity:1}} transition={{duration:0.5,ease:[0.22,1,0.36,1]}}
         style={{display:'flex',alignItems:'center',gap:10}}>
         <img src="/aumatic_img.png" width="52" height="52" alt="Aumatic.AI" style={{ display: 'block', objectFit: 'contain' }}/>
-        <span style={{fontSize:26,fontWeight:900,letterSpacing:-1,color:'#1A0F0A',fontFamily:"'Playfair Display',serif"}}>
+        <span style={{fontSize:26,fontWeight:900,letterSpacing:-1,color:'#1A0F0A',fontFamily:"'Montserrat', sans-serif"}}>
           Aumatic.<span style={{color:'#C2622D'}}>AI</span>
         </span>
       </motion.div>

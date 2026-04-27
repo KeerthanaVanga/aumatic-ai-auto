@@ -65,7 +65,7 @@ export default function CaseStudyHero({ study }) {
             color: '#1A0F0A',
             letterSpacing: -2,
             lineHeight: 1.1,
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Montserrat', sans-serif",
             maxWidth: 820,
             marginBottom: 24,
           }}

@@ -34,7 +34,7 @@
 
   /* Fonts */
   --font-sans:    'Montserrat', system-ui, sans-serif;
-  --font-serif:   'Playfair Display', 'Georgia', serif;
+  --font-serif:   'Montserrat', sans-serif;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }

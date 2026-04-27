@@ -75,7 +75,7 @@ export default function CaseStudySection({ section, index }) {
         letterSpacing: -1.2,
         marginBottom: 30,
         lineHeight: 1.15,
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Montserrat', sans-serif",
       }}>
         {section.title}
       </h2>

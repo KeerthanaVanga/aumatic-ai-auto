@@ -50,7 +50,7 @@ function StepCard({ s, i }) {
         {/* Bright number – always visible */}
         <span style={{
           fontSize:'clamp(36px,5vw,52px)', fontWeight:900, lineHeight:1,
-          fontFamily:"'Playfair Display',serif", letterSpacing:-2,
+          fontFamily:"'Montserrat', sans-serif", letterSpacing:-2,
           background:'linear-gradient(135deg,#C2622D,#E8A060)',
           WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
           userSelect:'none', flexShrink:0,
@@ -62,7 +62,7 @@ function StepCard({ s, i }) {
         </div>
       </div>
 
-      <h3 style={{ fontSize:'clamp(19px,2.2vw,23px)', fontWeight:800, color:'#1A0F0A', marginBottom:12, letterSpacing:-0.4, fontFamily:"'Playfair Display',serif" }}>{s.title}</h3>
+      <h3 style={{ fontSize:'clamp(19px,2.2vw,23px)', fontWeight:800, color:'#1A0F0A', marginBottom:12, letterSpacing:-0.4, fontFamily:"'Montserrat', sans-serif" }}>{s.title}</h3>
       <p style={{ fontSize:15, color:'#5C3D2A', lineHeight:1.72, marginBottom:20 }}>{s.desc}</p>
 
       <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
@@ -81,7 +81,7 @@ export default function Process() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(44px,6vw,72px)' }}>
           <span className="label">Our Process</span>
-          <h2 style={{ fontSize:'clamp(28px,4.5vw,56px)', fontWeight:900, letterSpacing:-2, color:'#1A0F0A', margin:'14px 0 16px', fontFamily:"'Playfair Display',serif" }}>
+          <h2 style={{ fontSize:'clamp(28px,4.5vw,56px)', fontWeight:900, letterSpacing:-2, color:'#1A0F0A', margin:'14px 0 16px', fontFamily:"'Montserrat', sans-serif" }}>
             A Proven Path to<br />Operational Excellence
           </h2>
           <p style={{ fontSize:'clamp(15px,1.8vw,17px)', color:'#5C3D2A', maxWidth:440, margin:'0 auto', lineHeight:1.65 }}>
