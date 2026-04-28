@@ -172,7 +172,7 @@ export default function Hero() {
 
         {/* Headline */}
         <motion.h1 variants={up} initial="hidden" animate="show" custom={0.1}
-          style={{ fontFamily:"'Montserrat', sans-serif", fontSize:'clamp(38px,5.5vw,72px)', fontWeight:900, lineHeight:1.18, letterSpacing:'-2.5px', marginBottom:32, color:'#1A0F0A' }}>
+          style={{ fontFamily:"'Montserrat', sans-serif", fontSize:'clamp(52px,7vw,92px)', fontWeight:900, lineHeight:1.05, letterSpacing:'-3px', marginBottom:36, color:'#1A0F0A' }}>
           We Build & Deploy{' '}
           <span className="hero-word shimmer-text">Intelligent</span>
           {' '}
@@ -182,7 +182,7 @@ export default function Hero() {
 
         {/* Sub */}
         <motion.p variants={up} initial="hidden" animate="show" custom={0.2}
-          style={{ fontSize:'clamp(18px,2.2vw,22px)', lineHeight:1.8, color:'#5C3D2A', maxWidth:640, margin:'0 auto 52px', fontWeight:400 }}>
+          style={{ fontSize:'clamp(19px,2.2vw,24px)', lineHeight:1.85, color:'#5C3D2A', maxWidth:660, margin:'0 auto 56px', fontWeight:400 }}>
           We analyze your workflows, design custom AI systems, and deploy automations that save your team hundreds of hours every month.
         </motion.p>
 

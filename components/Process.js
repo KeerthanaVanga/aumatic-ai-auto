@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+﻿import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const steps = [
@@ -13,7 +13,7 @@ const steps = [
     num:'02',
     icon:<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>,
     title:'Architecture & Design',
-    desc:'We architect the perfect automation stack — integrating your existing tools while adding intelligent layers on top.',
+    desc:'We architect the perfect automation stack â€” integrating your existing tools while adding intelligent layers on top.',
     tags:['System design','Integration planning','Data flow architecture','Tool selection'],
   },
   {
@@ -47,9 +47,9 @@ function StepCard({ s, i }) {
 
       {/* Number + icon row */}
       <div style={{ display:'flex', alignItems:'center', gap:14, marginBottom:22 }}>
-        {/* Bright number – always visible */}
+        {/* Bright number â€“ always visible */}
         <span style={{
-          fontSize:'clamp(36px,5vw,52px)', fontWeight:900, lineHeight:1,
+          fontSize:'clamp(42px,5vw,58px)', fontWeight:900, lineHeight:1,
           fontFamily:"'Montserrat', sans-serif", letterSpacing:-2,
           background:'linear-gradient(135deg,#C2622D,#E8A060)',
           WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
@@ -81,10 +81,10 @@ export default function Process() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(44px,6vw,72px)' }}>
           <span className="label">Our Process</span>
-          <h2 style={{ fontSize:'clamp(38px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#1A0F0A', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
+          <h2 style={{ fontSize:'clamp(44px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#1A0F0A', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
             A Proven Path to<br />Operational Excellence
           </h2>
-          <p style={{ fontSize:'clamp(16px,1.8vw,19px)', color:'#5C3D2A', maxWidth:480, margin:'0 auto', lineHeight:1.7 }}>
+          <p style={{ fontSize:'clamp(17px,1.9vw,21px)', color:'#5C3D2A', maxWidth:480, margin:'0 auto', lineHeight:1.7 }}>
             Four phases. Measurable outcomes. Every single time.
           </p>
         </motion.div>
@@ -95,3 +95,4 @@ export default function Process() {
     </section>
   )
 }
+

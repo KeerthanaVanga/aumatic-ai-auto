@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+﻿import { useState, useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const testimonials = [
@@ -17,7 +17,7 @@ const testimonials = [
     color: '#D4784A',
   },
   {
-    quote: 'The social media automation keeps our brand consistent across Instagram, TikTok, and LinkedIn. It genuinely feels like having a dedicated content team working around the clock — without the overhead.',
+    quote: 'The social media automation keeps our brand consistent across Instagram, TikTok, and LinkedIn. It genuinely feels like having a dedicated content team working around the clock â€” without the overhead.',
     name: 'Sandra Chen',
     role: 'Marketing Director, NorthStream Marketing (Vancouver)',
     initials: 'SC',
@@ -31,7 +31,7 @@ const testimonials = [
     color: '#6B4A3A',
   },
   {
-    quote: 'With the WhatsApp broadcast automation, every new book release now reaches thousands of readers instantly. We moved from manual messaging to automated, personalised broadcasts — and our launch-day results improved noticeably.',
+    quote: 'With the WhatsApp broadcast automation, every new book release now reaches thousands of readers instantly. We moved from manual messaging to automated, personalised broadcasts â€” and our launch-day results improved noticeably.',
     name: 'Maria Costa',
     role: 'Founder, Bluebell Publishing',
     initials: 'MC',
@@ -65,7 +65,7 @@ export default function Testimonials() {
   const inView       = useInView(headerRef, { once: true })
   const n            = testimonials.length
 
-  /* ── Measure container width (responsive) ── */
+  /* â”€â”€ Measure container width (responsive) â”€â”€ */
   useEffect(() => {
     const update = () => {
       if (containerRef.current) setContainerW(containerRef.current.offsetWidth)
@@ -75,20 +75,20 @@ export default function Testimonials() {
     return () => window.removeEventListener('resize', update)
   }, [])
 
-  /* ── Auto-advance ── */
+  /* â”€â”€ Auto-advance â”€â”€ */
   useEffect(() => {
     const t = setTimeout(() => setCurrent(c => (c + 1) % n), 5500)
     return () => clearTimeout(t)
   }, [current, n])
 
-  /* ── Dimensions ── */
+  /* â”€â”€ Dimensions â”€â”€ */
   const CARD_W = containerW > 0 ? Math.min(640, Math.max(280, containerW * 0.62)) : 0
   const trackX = containerW > 0 ? containerW / 2 - current * (CARD_W + GAP) - CARD_W / 2 : 0
 
   const goTo = i   => setCurrent(i)
   const go   = dir => setCurrent(c => (c + dir + n) % n)
 
-  /* ── Touch swipe ── */
+  /* â”€â”€ Touch swipe â”€â”€ */
   const onTouchStart = e => setTouchStart(e.touches[0].clientX)
   const onTouchEnd   = e => {
     if (touchStart == null) return
@@ -109,7 +109,7 @@ export default function Testimonials() {
 
       <div className="max-w-6xl mx-auto">
 
-        {/* ── Header ── */}
+        {/* â”€â”€ Header â”€â”€ */}
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 20 }}
@@ -123,7 +123,7 @@ export default function Testimonials() {
             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase', color: '#C2622D' }}>Testimonials</span>
           </div>
 
-          <h2 style={{ fontSize: 'clamp(38px,5.5vw,68px)', fontWeight: 900, color: '#1A0F0A', letterSpacing: -2.5, lineHeight: 1.08, margin: 0 }}>
+          <h2 style={{ fontSize: 'clamp(44px,5.5vw,68px)', fontWeight: 900, color: '#1A0F0A', letterSpacing: -2.5, lineHeight: 1.08, margin: 0 }}>
             What Clients Say About<br />
             <span style={{ background: 'linear-gradient(135deg,#C2622D,#A8501F)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Working With Us
@@ -131,7 +131,7 @@ export default function Testimonials() {
           </h2>
         </motion.div>
 
-        {/* ── Carousel stage ── */}
+        {/* â”€â”€ Carousel stage â”€â”€ */}
         <div
           ref={containerRef}
           style={{ position: 'relative', overflow: 'hidden', paddingTop: 8, paddingBottom: 8 }}
@@ -218,7 +218,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* ── Dot / dash indicators ── */}
+        {/* â”€â”€ Dot / dash indicators â”€â”€ */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 7, marginTop: 36 }}>
           {testimonials.map((_, i) => (
             <button
@@ -243,3 +243,4 @@ export default function Testimonials() {
     </section>
   )
 }
+

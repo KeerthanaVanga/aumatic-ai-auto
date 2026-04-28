@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react'
+﻿import { useState, useMemo, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import CaseStudyCard from './CaseStudyCard'
 import { caseStudies } from '../data/caseStudies'
@@ -12,7 +12,7 @@ export default function CaseStudies() {
   const [query, setQuery] = useState('')
   const [page,  setPage]  = useState(0)
 
-  /* ── Filtered list ── */
+  /* â”€â”€ Filtered list â”€â”€ */
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim()
     if (!q) return caseStudies
@@ -46,7 +46,7 @@ export default function CaseStudies() {
 
       <div className="max-w-6xl mx-auto">
 
-        {/* ── Section header ── */}
+        {/* â”€â”€ Section header â”€â”€ */}
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 20 }}
@@ -55,18 +55,18 @@ export default function CaseStudies() {
           style={{ textAlign: 'center', marginBottom: 48 }}
         >
           <span className="label">Case Studies</span>
-          <h2 style={{ fontSize: 'clamp(38px,5.5vw,68px)', fontWeight: 900, letterSpacing: -2.5, lineHeight: 1.08, color: '#1A0F0A', margin: '0 0 20px' }}>
+          <h2 style={{ fontSize: 'clamp(44px,5.5vw,68px)', fontWeight: 900, letterSpacing: -2.5, lineHeight: 1.08, color: '#1A0F0A', margin: '0 0 20px' }}>
             Real Clients.<br />
             <span style={{ background: 'linear-gradient(135deg,#C2622D,#A8501F)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Real Outcomes.
             </span>
           </h2>
-          <p style={{ fontSize: 'clamp(16px,1.8vw,19px)', color: '#8A6A5A', maxWidth: 540, margin: '0 auto', lineHeight: 1.75 }}>
+          <p style={{ fontSize: 'clamp(17px,1.9vw,21px)', color: '#8A6A5A', maxWidth: 540, margin: '0 auto', lineHeight: 1.75 }}>
             See how we've helped businesses automate their most time-consuming workflows and unlock measurable growth.
           </p>
         </motion.div>
 
-        {/* ── Search + count row ── */}
+        {/* â”€â”€ Search + count row â”€â”€ */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -92,7 +92,7 @@ export default function CaseStudies() {
 
             <input
               type="text"
-              placeholder="Search case studies…"
+              placeholder="Search case studiesâ€¦"
               value={query}
               onChange={handleSearch}
               style={{
@@ -128,13 +128,13 @@ export default function CaseStudies() {
                 onMouseLeave={e => e.currentTarget.style.color = '#8A6A5A'}
                 aria-label="Clear search"
               >
-                ×
+                Ã—
               </button>
             )}
           </div>
         </motion.div>
 
-        {/* ── Cards grid ── */}
+        {/* â”€â”€ Cards grid â”€â”€ */}
         <AnimatePresence mode="wait">
           {pageItems.length > 0 ? (
             <motion.div
@@ -150,7 +150,7 @@ export default function CaseStudies() {
               ))}
             </motion.div>
           ) : (
-            /* ── Empty state ── */
+            /* â”€â”€ Empty state â”€â”€ */
             <motion.div
               key="empty"
               initial={{ opacity: 0, scale: 0.96 }}
@@ -159,7 +159,7 @@ export default function CaseStudies() {
               transition={{ duration: 0.3 }}
               style={{ textAlign: 'center', padding: 'clamp(48px,6vw,80px) 24px' }}
             >
-              <div style={{ fontSize: 48, marginBottom: 18, opacity: 0.5 }}>🔍</div>
+              <div style={{ fontSize: 48, marginBottom: 18, opacity: 0.5 }}>ðŸ”</div>
               <h3 style={{ fontSize: 22, fontWeight: 800, color: '#1A0F0A', marginBottom: 10 }}>No results found</h3>
               <p style={{ fontSize: 15, color: '#8A6A5A', marginBottom: 24 }}>
                 No case studies match <strong>"{query}"</strong>. Try a different keyword.
@@ -176,7 +176,7 @@ export default function CaseStudies() {
           )}
         </AnimatePresence>
 
-        {/* ── Pagination ── */}
+        {/* â”€â”€ Pagination â”€â”€ */}
         {totalPages > 1 && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -267,3 +267,4 @@ export default function CaseStudies() {
     </section>
   )
 }
+

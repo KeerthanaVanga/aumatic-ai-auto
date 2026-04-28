@@ -1,9 +1,9 @@
-import { useRef } from 'react'
+﻿import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const rows = [
   { problem:'Low profit margins',        solution:'Displace labor with AI automation',          outcome:'Higher margins' },
-  { problem:'Slow delivery',             solution:'Eliminate bottlenecks with smart workflows',  outcome:'2× faster output' },
+  { problem:'Slow delivery',             solution:'Eliminate bottlenecks with smart workflows',  outcome:'2Ã— faster output' },
   { problem:'Falling behind competitors',solution:'Deploy AI-powered capabilities',              outcome:'Market advantage' },
   { problem:'Overworked teams',          solution:'Automate repetitive tasks',                   outcome:'Freed-up capacity' },
   { problem:'Data silos everywhere',     solution:'Unify tools and sync data',                   outcome:'Single source of truth' },
@@ -25,11 +25,11 @@ export default function Impact() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(44px,6vw,72px)' }}>
           <span style={{ fontSize:11, fontWeight:700, letterSpacing:3.5, textTransform:'uppercase', color:'#D4784A' }}>Impact</span>
-          <h2 style={{ fontSize:'clamp(38px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#F5EFE8', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
+          <h2 style={{ fontSize:'clamp(44px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#F5EFE8', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
             We Find Constraints,<br />Then Crush Them
           </h2>
-          <p style={{ fontSize:'clamp(16px,1.8vw,19px)', color:'rgba(245,239,232,0.6)', maxWidth:540, margin:'0 auto', lineHeight:1.7 }}>
-            Every automation compounds over time — creating a flywheel of profitability and competitive edge.
+          <p style={{ fontSize:'clamp(17px,1.9vw,21px)', color:'rgba(245,239,232,0.6)', maxWidth:540, margin:'0 auto', lineHeight:1.7 }}>
+            Every automation compounds over time â€” creating a flywheel of profitability and competitive edge.
           </p>
         </motion.div>
 
@@ -74,7 +74,7 @@ export default function Impact() {
                 <div style={{ fontSize:13, color:'rgba(245,239,232,0.45)', fontWeight:600, marginBottom:8, textTransform:'uppercase', letterSpacing:1 }}>Problem</div>
                 <div style={{ fontSize:16, color:'rgba(245,239,232,0.6)', marginBottom:10, lineHeight:1.65 }}>{row.problem}</div>
                 <div style={{ fontSize:16, color:'rgba(245,239,232,0.85)', fontWeight:500, marginBottom:10, lineHeight:1.65 }}>{row.solution}</div>
-                <div style={{ fontSize:16, color:'#D4784A', fontWeight:700 }}>→ {row.outcome}</div>
+                <div style={{ fontSize:16, color:'#D4784A', fontWeight:700 }}>â†’ {row.outcome}</div>
               </motion.div>
             )
           })}
@@ -88,3 +88,4 @@ export default function Impact() {
     </section>
   )
 }
+

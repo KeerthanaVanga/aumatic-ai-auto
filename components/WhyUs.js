@@ -1,11 +1,11 @@
-import { useRef } from 'react'
+﻿import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const reasons = [
   {
     icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2622D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>,
     title:'Full-Stack AI Expertise',
-    desc:"We don't just do one thing — we handle the entire automation lifecycle from strategy through deployment and optimization.",
+    desc:"We don't just do one thing â€” we handle the entire automation lifecycle from strategy through deployment and optimization.",
   },
   {
     icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2622D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>,
@@ -33,10 +33,10 @@ export default function WhyUs() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(44px,6vw,72px)' }}>
           <span className="label">Why Aumatic</span>
-          <h2 style={{ fontSize:'clamp(38px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#1A0F0A', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
+          <h2 style={{ fontSize:'clamp(44px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#1A0F0A', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
             Built Different. Proven Results.
           </h2>
-          <p style={{ fontSize:'clamp(16px,1.8vw,19px)', color:'#5C3D2A', maxWidth:560, margin:'0 auto', lineHeight:1.7 }}>
+          <p style={{ fontSize:'clamp(17px,1.9vw,21px)', color:'#5C3D2A', maxWidth:560, margin:'0 auto', lineHeight:1.7 }}>
             We take a consultative approach so you never miss hidden opportunities or fumble implementation.
           </p>
         </motion.div>
@@ -55,7 +55,7 @@ export default function WhyUs() {
                   {r.icon}
                 </div>
                 <div>
-                  <h3 style={{ fontSize:'clamp(19px,2.3vw,24px)', fontWeight:700, color:'#1A0F0A', marginBottom:10, letterSpacing:-0.4, fontFamily:"'Montserrat', sans-serif" }}>{r.title}</h3>
+                  <h3 style={{ fontSize:'clamp(20px,2.4vw,26px)', fontWeight:700, color:'#1A0F0A', marginBottom:10, letterSpacing:-0.4, fontFamily:"'Montserrat', sans-serif" }}>{r.title}</h3>
                   <p style={{ fontSize:16, color:'#5C3D2A', lineHeight:1.8 }}>{r.desc}</p>
                 </div>
               </motion.div>
@@ -66,3 +66,4 @@ export default function WhyUs() {
     </section>
   )
 }
+
