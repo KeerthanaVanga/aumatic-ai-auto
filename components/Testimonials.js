@@ -123,7 +123,7 @@ export default function Testimonials() {
             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase', color: '#C2622D' }}>Testimonials</span>
           </div>
 
-          <h2 style={{ fontSize: 'clamp(28px,4vw,52px)', fontWeight: 900, color: '#1A0F0A', letterSpacing: -1.5, lineHeight: 1.1, margin: 0 }}>
+          <h2 style={{ fontSize: 'clamp(38px,5.5vw,68px)', fontWeight: 900, color: '#1A0F0A', letterSpacing: -2.5, lineHeight: 1.08, margin: 0 }}>
             What Clients Say About<br />
             <span style={{ background: 'linear-gradient(135deg,#C2622D,#A8501F)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Working With Us
@@ -174,9 +174,9 @@ export default function Testimonials() {
                 >
                   {/* Quote text */}
                   <p style={{
-                    fontSize: 'clamp(14px,1.4vw,17px)',
+                    fontSize: 'clamp(15px,1.6vw,18px)',
                     color: isActive ? 'rgba(245,239,232,0.82)' : '#8A6A5A',
-                    lineHeight: 1.85,
+                    lineHeight: 1.9,
                     textAlign: 'center',
                     marginBottom: 28,
                     transition: 'color 0.55s',
@@ -204,10 +204,10 @@ export default function Testimonials() {
                     </div>
 
                     <div>
-                      <div style={{ fontSize: 15, fontWeight: 700, color: isActive ? '#C2622D' : '#8A6A5A', transition: 'color 0.55s' }}>
+                      <div style={{ fontSize: 16, fontWeight: 700, color: isActive ? '#C2622D' : '#8A6A5A', transition: 'color 0.55s' }}>
                         {t.name}
                       </div>
-                      <div style={{ fontSize: 12, color: isActive ? 'rgba(245,239,232,0.42)' : '#B89A88', lineHeight: 1.5, transition: 'color 0.55s' }}>
+                      <div style={{ fontSize: 13, color: isActive ? 'rgba(245,239,232,0.42)' : '#B89A88', lineHeight: 1.5, transition: 'color 0.55s' }}>
                         {t.role}
                       </div>
                     </div>

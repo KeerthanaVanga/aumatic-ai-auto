@@ -55,13 +55,13 @@ export default function CaseStudies() {
           style={{ textAlign: 'center', marginBottom: 48 }}
         >
           <span className="label">Case Studies</span>
-          <h2 style={{ fontSize: 'clamp(30px,4vw,52px)', fontWeight: 900, letterSpacing: -1.5, color: '#1A0F0A', margin: '14px 0 16px' }}>
+          <h2 style={{ fontSize: 'clamp(38px,5.5vw,68px)', fontWeight: 900, letterSpacing: -2.5, lineHeight: 1.08, color: '#1A0F0A', margin: '0 0 20px' }}>
             Real Clients.<br />
             <span style={{ background: 'linear-gradient(135deg,#C2622D,#A8501F)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Real Outcomes.
             </span>
           </h2>
-          <p style={{ fontSize: 18, color: '#8A6A5A', maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>
+          <p style={{ fontSize: 'clamp(16px,1.8vw,19px)', color: '#8A6A5A', maxWidth: 540, margin: '0 auto', lineHeight: 1.75 }}>
             See how we've helped businesses automate their most time-consuming workflows and unlock measurable growth.
           </p>
         </motion.div>

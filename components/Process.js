@@ -62,8 +62,8 @@ function StepCard({ s, i }) {
         </div>
       </div>
 
-      <h3 style={{ fontSize:'clamp(19px,2.2vw,23px)', fontWeight:800, color:'#1A0F0A', marginBottom:12, letterSpacing:-0.4, fontFamily:"'Montserrat', sans-serif" }}>{s.title}</h3>
-      <p style={{ fontSize:15, color:'#5C3D2A', lineHeight:1.72, marginBottom:20 }}>{s.desc}</p>
+      <h3 style={{ fontSize:'clamp(20px,2.4vw,26px)', fontWeight:700, color:'#1A0F0A', marginBottom:12, letterSpacing:-0.5, fontFamily:"'Montserrat', sans-serif" }}>{s.title}</h3>
+      <p style={{ fontSize:16, color:'#5C3D2A', lineHeight:1.8, marginBottom:20 }}>{s.desc}</p>
 
       <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
         {s.tags.map(t => <span key={t} className="tag">{t}</span>)}
@@ -81,10 +81,10 @@ export default function Process() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(44px,6vw,72px)' }}>
           <span className="label">Our Process</span>
-          <h2 style={{ fontSize:'clamp(28px,4.5vw,56px)', fontWeight:900, letterSpacing:-2, color:'#1A0F0A', margin:'14px 0 16px', fontFamily:"'Montserrat', sans-serif" }}>
+          <h2 style={{ fontSize:'clamp(38px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#1A0F0A', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
             A Proven Path to<br />Operational Excellence
           </h2>
-          <p style={{ fontSize:'clamp(15px,1.8vw,17px)', color:'#5C3D2A', maxWidth:440, margin:'0 auto', lineHeight:1.65 }}>
+          <p style={{ fontSize:'clamp(16px,1.8vw,19px)', color:'#5C3D2A', maxWidth:480, margin:'0 auto', lineHeight:1.7 }}>
             Four phases. Measurable outcomes. Every single time.
           </p>
         </motion.div>

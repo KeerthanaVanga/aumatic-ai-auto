@@ -25,10 +25,10 @@ export default function Impact() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(44px,6vw,72px)' }}>
           <span style={{ fontSize:11, fontWeight:700, letterSpacing:3.5, textTransform:'uppercase', color:'#D4784A' }}>Impact</span>
-          <h2 style={{ fontSize:'clamp(28px,5vw,60px)', fontWeight:900, letterSpacing:-2, color:'#F5EFE8', margin:'14px 0 16px', fontFamily:"'Montserrat', sans-serif", lineHeight:1.1 }}>
+          <h2 style={{ fontSize:'clamp(38px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#F5EFE8', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
             We Find Constraints,<br />Then Crush Them
           </h2>
-          <p style={{ fontSize:'clamp(15px,1.8vw,17px)', color:'rgba(245,239,232,0.6)', maxWidth:520, margin:'0 auto', lineHeight:1.65 }}>
+          <p style={{ fontSize:'clamp(16px,1.8vw,19px)', color:'rgba(245,239,232,0.6)', maxWidth:540, margin:'0 auto', lineHeight:1.7 }}>
             Every automation compounds over time — creating a flywheel of profitability and competitive edge.
           </p>
         </motion.div>
@@ -52,9 +52,9 @@ export default function Impact() {
                 onMouseEnter={e => e.currentTarget.style.background='rgba(194,98,45,0.06)'}
                 onMouseLeave={e => e.currentTarget.style.background='transparent'}
               >
-                <span style={{ fontSize:15, color:'rgba(245,239,232,0.5)' }}>{row.problem}</span>
-                <span style={{ fontSize:15, color:'rgba(245,239,232,0.85)', fontWeight:500 }}>{row.solution}</span>
-                <span style={{ fontSize:15, color:'#D4784A', fontWeight:800 }}>{row.outcome}</span>
+                <span style={{ fontSize:16, color:'rgba(245,239,232,0.5)' }}>{row.problem}</span>
+                <span style={{ fontSize:16, color:'rgba(245,239,232,0.85)', fontWeight:500 }}>{row.solution}</span>
+                <span style={{ fontSize:16, color:'#D4784A', fontWeight:700 }}>{row.outcome}</span>
               </motion.div>
             )
           })}
@@ -71,10 +71,10 @@ export default function Impact() {
                 transition={{ duration:0.45, delay:i*0.04 }}
                 style={{ padding:'18px 20px', borderRadius:14, background:'rgba(255,255,255,0.04)', border:'1px solid rgba(194,98,45,0.18)' }}
               >
-                <div style={{ fontSize:12, color:'rgba(245,239,232,0.45)', fontWeight:600, marginBottom:6, textTransform:'uppercase', letterSpacing:1 }}>Problem</div>
-                <div style={{ fontSize:15, color:'rgba(245,239,232,0.6)', marginBottom:10 }}>{row.problem}</div>
-                <div style={{ fontSize:15, color:'rgba(245,239,232,0.85)', fontWeight:500, marginBottom:10 }}>{row.solution}</div>
-                <div style={{ fontSize:15, color:'#D4784A', fontWeight:800 }}>→ {row.outcome}</div>
+                <div style={{ fontSize:13, color:'rgba(245,239,232,0.45)', fontWeight:600, marginBottom:8, textTransform:'uppercase', letterSpacing:1 }}>Problem</div>
+                <div style={{ fontSize:16, color:'rgba(245,239,232,0.6)', marginBottom:10, lineHeight:1.65 }}>{row.problem}</div>
+                <div style={{ fontSize:16, color:'rgba(245,239,232,0.85)', fontWeight:500, marginBottom:10, lineHeight:1.65 }}>{row.solution}</div>
+                <div style={{ fontSize:16, color:'#D4784A', fontWeight:700 }}>→ {row.outcome}</div>
               </motion.div>
             )
           })}

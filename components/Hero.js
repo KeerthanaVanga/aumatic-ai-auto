@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Headline */}
         <motion.h1 variants={up} initial="hidden" animate="show" custom={0.1}
-          style={{ fontFamily:"'Montserrat', sans-serif", fontSize:'clamp(42px,7.5vw,92px)', fontWeight:900, lineHeight:1.05, letterSpacing:'-clamp(1px,0.03em,3px)', marginBottom:28, color:'#1A0F0A' }}>
+          style={{ fontFamily:"'Montserrat', sans-serif", fontSize:'clamp(60px,9.5vw,128px)', fontWeight:900, lineHeight:1.0, letterSpacing:'-3px', marginBottom:32, color:'#1A0F0A' }}>
           We Build & Deploy{' '}
           <span style={{ color:'#C2622D' }}>Intelligent</span>
           <br />
@@ -43,14 +43,14 @@ export default function Hero() {
 
         {/* Sub */}
         <motion.p variants={up} initial="hidden" animate="show" custom={0.2}
-          style={{ fontSize:'clamp(16px,2vw,19px)', lineHeight:1.72, color:'#5C3D2A', maxWidth:620, margin:'0 auto 44px', fontWeight:400 }}>
+          style={{ fontSize:'clamp(18px,2.2vw,22px)', lineHeight:1.8, color:'#5C3D2A', maxWidth:640, margin:'0 auto 52px', fontWeight:400 }}>
           We analyze your workflows, design custom AI systems, and deploy automations that save your team hundreds of hours every month.
         </motion.p>
 
         {/* CTA */}
         <motion.div variants={up} initial="hidden" animate="show" custom={0.3} style={{ marginBottom:52 }}>
           <motion.a href="https://cal.com/chandan-kumar-zhrofj/30min" target="_blank" rel="noopener noreferrer" whileHover={{ scale:1.04, y:-2 }} whileTap={{ scale:0.97 }}
-            style={{ display:'inline-flex', alignItems:'center', gap:12, padding:'17px 38px', borderRadius:13, fontSize:17, fontWeight:800, background:'linear-gradient(135deg,#C2622D,#A8501F)', color:'white', textDecoration:'none', boxShadow:'0 8px 32px rgba(194,98,45,0.45)', letterSpacing:0.2 }}>
+            style={{ display:'inline-flex', alignItems:'center', gap:12, padding:'18px 42px', borderRadius:13, fontSize:18, fontWeight:700, background:'linear-gradient(135deg,#C2622D,#A8501F)', color:'white', textDecoration:'none', boxShadow:'0 8px 32px rgba(194,98,45,0.45)', letterSpacing:0.3 }}>
             Book a Free Call <span style={{ fontSize:18 }}>→</span>
           </motion.a>
         </motion.div>
@@ -65,7 +65,7 @@ export default function Hero() {
           ].map((b,i) => (
             <div key={i} style={{ display:'flex', alignItems:'center', gap:8 }}>
               <span style={{ width:8, height:8, borderRadius:99, background:'#C2622D', boxShadow:'0 0 6px rgba(194,98,45,0.5)' }} />
-              <span style={{ fontSize:14, color:'#5C3D2A', fontWeight:500 }}>{b.text}</span>
+              <span style={{ fontSize:15, color:'#5C3D2A', fontWeight:500 }}>{b.text}</span>
             </div>
           ))}
         </motion.div>

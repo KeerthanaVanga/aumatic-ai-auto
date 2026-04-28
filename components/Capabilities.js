@@ -21,7 +21,7 @@ function CapCard({ c, i }) {
     >
       <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:16 }}>
         <div style={{ width:40, height:40, borderRadius:11, background:'rgba(194,98,45,0.1)', border:'1px solid rgba(194,98,45,0.2)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:19, flexShrink:0 }}>{c.icon}</div>
-        <h3 style={{ fontSize:'clamp(15px,1.8vw,17px)', fontWeight:800, color:'#1A0F0A', letterSpacing:-0.2 }}>{c.title}</h3>
+        <h3 style={{ fontSize:'clamp(16px,1.9vw,19px)', fontWeight:700, color:'#1A0F0A', letterSpacing:-0.2 }}>{c.title}</h3>
       </div>
       <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
         {c.tags.map(t => <span key={t} className="tag">{t}</span>)}
@@ -39,10 +39,10 @@ export default function Capabilities() {
         <motion.div ref={ref} initial={{ opacity:0, y:20 }} animate={inView ? { opacity:1, y:0 } : {}} transition={{ duration:0.6 }}
           style={{ textAlign:'center', marginBottom:'clamp(40px,6vw,64px)' }}>
           <span className="label">Capabilities</span>
-          <h2 style={{ fontSize:'clamp(28px,4.5vw,56px)', fontWeight:900, letterSpacing:-2, color:'#1A0F0A', margin:'14px 0 16px', fontFamily:"'Montserrat', sans-serif" }}>
+          <h2 style={{ fontSize:'clamp(38px,5.5vw,72px)', fontWeight:900, letterSpacing:-2.5, color:'#1A0F0A', margin:'0 0 20px', lineHeight:1.08, fontFamily:"'Montserrat', sans-serif" }}>
             Technologies We Master
           </h2>
-          <p style={{ fontSize:'clamp(15px,1.8vw,17px)', color:'#5C3D2A', maxWidth:480, margin:'0 auto', lineHeight:1.65 }}>
+          <p style={{ fontSize:'clamp(16px,1.8vw,19px)', color:'#5C3D2A', maxWidth:520, margin:'0 auto', lineHeight:1.7 }}>
             Platform-agnostic expertise. We pick the right tools for your unique needs.
           </p>
         </motion.div>
