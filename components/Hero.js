@@ -21,7 +21,7 @@ export default function Hero() {
         <path d="M0,80 C400,45 800,90 1200,60 C1320,48 1400,72 1440,80 L1440,100 L0,100Z" fill="rgba(194,98,45,0.04)" />
       </svg>
 
-      <div style={{ maxWidth:900, margin:'0 auto', padding:'0 clamp(16px,4vw,24px)', textAlign:'center', position:'relative', zIndex:1 }}>
+      <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 clamp(16px,4vw,24px)', textAlign:'center', position:'relative', zIndex:1 }}>
 
         {/* Badge */}
         <motion.div variants={up} initial="hidden" animate="show" custom={0}
@@ -33,10 +33,10 @@ export default function Hero() {
 
         {/* Headline */}
         <motion.h1 variants={up} initial="hidden" animate="show" custom={0.1}
-          style={{ fontFamily:"'Montserrat', sans-serif", fontSize:'clamp(60px,9.5vw,128px)', fontWeight:900, lineHeight:1.0, letterSpacing:'-3px', marginBottom:32, color:'#1A0F0A' }}>
+          style={{ fontFamily:"'Montserrat', sans-serif", fontSize:'clamp(28px,4vw,48px)', fontWeight:900, lineHeight:1.1, letterSpacing:'-1.5px', marginBottom:32, color:'#1A0F0A' }}>
           We Build & Deploy{' '}
           <span style={{ color:'#C2622D' }}>Intelligent</span>
-          <br />
+          {' '}
           <span style={{ color:'#C2622D' }}>Automation</span>
           {' '}for Your Business
         </motion.h1>
