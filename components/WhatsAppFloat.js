@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const WHATSAPP_NUMBER = '919390946445' // Replace with your WhatsApp number (country code + number, no + or spaces)
+const WHATSAPP_NUMBER = '919849884501' // Replace with your WhatsApp number (country code + number, no + or spaces)
 const WHATSAPP_MESSAGE = 'Hi! I\'m interested in AI automation services from Aumatic.AI'
 
 export default function WhatsAppFloat() {
