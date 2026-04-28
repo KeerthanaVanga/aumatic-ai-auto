@@ -8,43 +8,86 @@ export default function Hero() {
       minHeight: '100vh', position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
       paddingTop: 96, paddingBottom: 80,
-      background: '#F2E8DA',
+      background: 'linear-gradient(145deg, #E8D9C4 0%, #F0E3CF 40%, #E4D4BC 100%)',
     }}>
 
-      {/* ── Mesh gradient layer ── */}
-      <div style={{ position:'absolute', inset:0, pointerEvents:'none',
-        background:`
-          radial-gradient(ellipse 80% 70% at 8% 10%,  rgba(194,98,45,0.22)   0%, transparent 55%),
-          radial-gradient(ellipse 65% 60% at 92% 8%,  rgba(220,140,60,0.18)  0%, transparent 50%),
-          radial-gradient(ellipse 90% 80% at 50% 115%, rgba(180,110,50,0.20)  0%, transparent 55%),
-          radial-gradient(ellipse 55% 50% at 78% 72%, rgba(240,190,120,0.22) 0%, transparent 50%),
-          radial-gradient(ellipse 60% 55% at 18% 82%, rgba(210,150,80,0.16)  0%, transparent 50%)
-        `
+      <style>{`
+        @keyframes heroBlob1 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          33%      { transform: translate(60px,-45px) scale(1.12); }
+          66%      { transform: translate(-30px,35px) scale(0.93); }
+        }
+        @keyframes heroBlob2 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          33%      { transform: translate(-70px,40px) scale(0.92); }
+          66%      { transform: translate(45px,-30px) scale(1.1); }
+        }
+        @keyframes heroBlob3 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          50%      { transform: translate(30px,-55px) scale(1.08); }
+        }
+        @keyframes heroBlob4 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          40%      { transform: translate(-40px,50px) scale(1.06); }
+          80%      { transform: translate(50px,20px) scale(0.95); }
+        }
+        @keyframes heroRing {
+          0%,100% { opacity:0.07; transform:scale(1); }
+          50%      { opacity:0.13; transform:scale(1.04); }
+        }
+      `}</style>
+
+      {/* ── Animated color blobs ── */}
+      <div style={{
+        position:'absolute', top:'-15%', left:'-10%', width:750, height:750,
+        borderRadius:'50%', pointerEvents:'none', filter:'blur(60px)',
+        background:'radial-gradient(circle, rgba(194,98,45,0.38) 0%, rgba(210,130,55,0.18) 50%, transparent 70%)',
+        animation:'heroBlob1 22s ease-in-out infinite',
+      }} />
+      <div style={{
+        position:'absolute', top:'-12%', right:'-8%', width:680, height:680,
+        borderRadius:'50%', pointerEvents:'none', filter:'blur(55px)',
+        background:'radial-gradient(circle, rgba(220,150,60,0.35) 0%, rgba(230,170,80,0.16) 50%, transparent 70%)',
+        animation:'heroBlob2 26s ease-in-out infinite',
+      }} />
+      <div style={{
+        position:'absolute', bottom:'-18%', left:'15%', width:620, height:620,
+        borderRadius:'50%', pointerEvents:'none', filter:'blur(65px)',
+        background:'radial-gradient(circle, rgba(180,90,35,0.30) 0%, rgba(200,120,60,0.14) 50%, transparent 70%)',
+        animation:'heroBlob3 30s ease-in-out infinite',
+      }} />
+      <div style={{
+        position:'absolute', bottom:'5%', right:'5%', width:500, height:500,
+        borderRadius:'50%', pointerEvents:'none', filter:'blur(50px)',
+        background:'radial-gradient(circle, rgba(230,165,70,0.28) 0%, transparent 65%)',
+        animation:'heroBlob4 18s ease-in-out infinite',
       }} />
 
-      {/* ── Center soft glow so text area is bright ── */}
-      <div style={{ position:'absolute', inset:0, pointerEvents:'none',
-        background:'radial-gradient(ellipse 70% 60% at 50% 44%, rgba(255,245,232,0.72) 0%, transparent 65%)'
+      {/* ── Center bright zone for readability ── */}
+      <div style={{
+        position:'absolute', inset:0, pointerEvents:'none',
+        background:'radial-gradient(ellipse 65% 55% at 50% 46%, rgba(255,248,238,0.68) 0%, transparent 70%)',
       }} />
 
-      {/* ── Grain texture overlay ── */}
-      <svg style={{ position:'absolute', inset:0, width:'100%', height:'100%', opacity:0.045, pointerEvents:'none' }} xmlns="http://www.w3.org/2000/svg">
-        <filter id="grain">
-          <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/>
-          <feColorMatrix type="saturate" values="0"/>
-        </filter>
-        <rect width="100%" height="100%" filter="url(#grain)"/>
+      {/* ── Decorative rings ── */}
+      <svg style={{ position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', width:'min(900px,90vw)', height:'min(900px,90vw)', pointerEvents:'none', animation:'heroRing 8s ease-in-out infinite' }} viewBox="0 0 900 900" fill="none">
+        <circle cx="450" cy="450" r="380" stroke="rgba(194,98,45,0.10)" strokeWidth="1.5" strokeDasharray="6 14"/>
+        <circle cx="450" cy="450" r="280" stroke="rgba(194,98,45,0.07)" strokeWidth="1"   strokeDasharray="4 18"/>
       </svg>
 
-      {/* ── Floating accent blobs ── */}
-      <div style={{ position:'absolute', top:'-5%', left:'-4%', width:700, height:700, borderRadius:'50%', background:'radial-gradient(circle, rgba(194,98,45,0.13) 0%, transparent 60%)', pointerEvents:'none', filter:'blur(2px)' }} />
-      <div style={{ position:'absolute', top:'-10%', right:'-5%', width:620, height:620, borderRadius:'50%', background:'radial-gradient(circle, rgba(220,145,55,0.14) 0%, transparent 60%)', pointerEvents:'none', filter:'blur(2px)' }} />
-      <div style={{ position:'absolute', bottom:'-8%', left:'20%', width:560, height:560, borderRadius:'50%', background:'radial-gradient(circle, rgba(194,98,45,0.12) 0%, transparent 60%)', pointerEvents:'none', filter:'blur(4px)' }} />
+      {/* ── Grain texture ── */}
+      <svg style={{ position:'absolute', inset:0, width:'100%', height:'100%', opacity:0.055, pointerEvents:'none' }} xmlns="http://www.w3.org/2000/svg">
+        <filter id="hgrain">
+          <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="4" stitchTiles="stitch"/>
+          <feColorMatrix type="saturate" values="0"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#hgrain)"/>
+      </svg>
 
       {/* ── Bottom wave ── */}
-      <svg style={{ position:'absolute', bottom:0, left:0, right:0, width:'100%', opacity:0.5 }} viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
-        <path d="M0,60 C360,100 720,20 1080,65 C1260,87 1380,45 1440,55 L1440,100 L0,100Z" fill="rgba(194,98,45,0.08)" />
-        <path d="M0,80 C400,45 800,90 1200,60 C1320,48 1400,72 1440,80 L1440,100 L0,100Z" fill="rgba(194,98,45,0.05)" />
+      <svg style={{ position:'absolute', bottom:0, left:0, right:0, width:'100%', opacity:0.55 }} viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
+        <path d="M0,60 C360,100 720,20 1080,65 C1260,87 1380,45 1440,55 L1440,100 L0,100Z" fill="rgba(160,75,25,0.10)" />
+        <path d="M0,80 C400,45 800,90 1200,60 C1320,48 1400,72 1440,80 L1440,100 L0,100Z" fill="rgba(160,75,25,0.06)" />
       </svg>
 
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 clamp(16px,4vw,24px)', textAlign:'center', position:'relative', zIndex:1 }}>
