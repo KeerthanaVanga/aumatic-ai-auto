@@ -8,17 +8,43 @@ export default function Hero() {
       minHeight: '100vh', position: 'relative', overflow: 'hidden',
       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
       paddingTop: 96, paddingBottom: 80,
-      background: 'linear-gradient(175deg, #F0E8DC 0%, #F5EFE8 40%, #EDE4D8 100%)',
+      background: '#F2E8DA',
     }}>
-      {/* Large soft orbs – exact aumatic.ai look */}
-      <div className="orb1" style={{ position:'absolute', top:'-12%', left:'-8%',  width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle, rgba(210,180,150,0.45) 0%, transparent 65%)', pointerEvents:'none' }} />
-      <div className="orb2" style={{ position:'absolute', top:'-8%',  right:'-6%', width:540, height:540, borderRadius:'50%', background:'radial-gradient(circle, rgba(200,165,135,0.35) 0%, transparent 65%)', pointerEvents:'none' }} />
-      <div className="orb3" style={{ position:'absolute', bottom:'5%',left:'25%',  width:460, height:460, borderRadius:'50%', background:'radial-gradient(circle, rgba(220,190,160,0.3) 0%, transparent 65%)',  pointerEvents:'none' }} />
 
-      {/* Bottom wave */}
-      <svg style={{ position:'absolute', bottom:0, left:0, right:0, width:'100%', opacity:0.6 }} viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
-        <path d="M0,60 C360,100 720,20 1080,65 C1260,87 1380,45 1440,55 L1440,100 L0,100Z" fill="rgba(194,98,45,0.06)" />
-        <path d="M0,80 C400,45 800,90 1200,60 C1320,48 1400,72 1440,80 L1440,100 L0,100Z" fill="rgba(194,98,45,0.04)" />
+      {/* ── Mesh gradient layer ── */}
+      <div style={{ position:'absolute', inset:0, pointerEvents:'none',
+        background:`
+          radial-gradient(ellipse 80% 70% at 8% 10%,  rgba(194,98,45,0.22)   0%, transparent 55%),
+          radial-gradient(ellipse 65% 60% at 92% 8%,  rgba(220,140,60,0.18)  0%, transparent 50%),
+          radial-gradient(ellipse 90% 80% at 50% 115%, rgba(180,110,50,0.20)  0%, transparent 55%),
+          radial-gradient(ellipse 55% 50% at 78% 72%, rgba(240,190,120,0.22) 0%, transparent 50%),
+          radial-gradient(ellipse 60% 55% at 18% 82%, rgba(210,150,80,0.16)  0%, transparent 50%)
+        `
+      }} />
+
+      {/* ── Center soft glow so text area is bright ── */}
+      <div style={{ position:'absolute', inset:0, pointerEvents:'none',
+        background:'radial-gradient(ellipse 70% 60% at 50% 44%, rgba(255,245,232,0.72) 0%, transparent 65%)'
+      }} />
+
+      {/* ── Grain texture overlay ── */}
+      <svg style={{ position:'absolute', inset:0, width:'100%', height:'100%', opacity:0.045, pointerEvents:'none' }} xmlns="http://www.w3.org/2000/svg">
+        <filter id="grain">
+          <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/>
+          <feColorMatrix type="saturate" values="0"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#grain)"/>
+      </svg>
+
+      {/* ── Floating accent blobs ── */}
+      <div style={{ position:'absolute', top:'-5%', left:'-4%', width:700, height:700, borderRadius:'50%', background:'radial-gradient(circle, rgba(194,98,45,0.13) 0%, transparent 60%)', pointerEvents:'none', filter:'blur(2px)' }} />
+      <div style={{ position:'absolute', top:'-10%', right:'-5%', width:620, height:620, borderRadius:'50%', background:'radial-gradient(circle, rgba(220,145,55,0.14) 0%, transparent 60%)', pointerEvents:'none', filter:'blur(2px)' }} />
+      <div style={{ position:'absolute', bottom:'-8%', left:'20%', width:560, height:560, borderRadius:'50%', background:'radial-gradient(circle, rgba(194,98,45,0.12) 0%, transparent 60%)', pointerEvents:'none', filter:'blur(4px)' }} />
+
+      {/* ── Bottom wave ── */}
+      <svg style={{ position:'absolute', bottom:0, left:0, right:0, width:'100%', opacity:0.5 }} viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
+        <path d="M0,60 C360,100 720,20 1080,65 C1260,87 1380,45 1440,55 L1440,100 L0,100Z" fill="rgba(194,98,45,0.08)" />
+        <path d="M0,80 C400,45 800,90 1200,60 C1320,48 1400,72 1440,80 L1440,100 L0,100Z" fill="rgba(194,98,45,0.05)" />
       </svg>
 
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 clamp(16px,4vw,24px)', textAlign:'center', position:'relative', zIndex:1 }}>
