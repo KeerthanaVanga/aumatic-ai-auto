@@ -133,7 +133,7 @@ export default function CaseStudyPage({ study }) {
               </p>
             </div>
 
-            <motion.a href="/#contact" whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.97 }}
+            <motion.a href="https://cal.com/chandan-kumar-zhrofj/30min" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.97 }}
               style={{ flexShrink: 0, position: 'relative', zIndex: 1, display: 'inline-flex', alignItems: 'center', gap: 8, padding: '15px 32px', borderRadius: 12, background: 'linear-gradient(135deg,#C2622D,#A8501F)', color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: 16, boxShadow: '0 8px 28px rgba(194,98,45,0.42)', whiteSpace: 'nowrap' }}>
               Book a Free Call
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

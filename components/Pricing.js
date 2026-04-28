@@ -56,7 +56,7 @@ function PricingCard({ plan, i, annual }) {
             </div>
           ))}
         </div>
-        <motion.a href="#contact" whileHover={{ scale:1.03 }} whileTap={{ scale:0.97 }}
+        <motion.a href="https://cal.com/chandan-kumar-zhrofj/30min" target="_blank" rel="noopener noreferrer" whileHover={{ scale:1.03 }} whileTap={{ scale:0.97 }}
           style={{ display:'block', textAlign:'center', padding:'13px 24px', borderRadius:12, fontSize:14, fontWeight:800, textDecoration:'none', color:'white',
             background: plan.popular ? 'linear-gradient(135deg,#0D9488,#2DD4BF)' : `linear-gradient(135deg,${plan.color}cc,${plan.color})`,
             boxShadow: plan.popular ? '0 4px 24px rgba(13,148,136,0.35)' : `0 4px 16px ${plan.color}30`,

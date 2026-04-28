@@ -54,7 +54,7 @@ export default function FAQ() {
             Everything You<br /><span className="text-gradient">Need to Know</span>
           </h2>
           <p style={{ fontSize:16, color:'#155E59', lineHeight:1.65 }}>
-            Still have questions? <a href="#contact" style={{ color:'#0D9488', textDecoration:'none', fontWeight:600 }}>Book a free call</a> — we'll answer everything.
+            Still have questions? <a href="https://cal.com/chandan-kumar-zhrofj/30min" target="_blank" rel="noopener noreferrer" style={{ color:'#0D9488', textDecoration:'none', fontWeight:600 }}>Book a free call</a> — we'll answer everything.
           </p>
         </motion.div>
         <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
