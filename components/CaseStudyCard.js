@@ -154,8 +154,9 @@ export default function CaseStudyCard({ study, index }) {
     >
       <Link href={`/case-studies/${study.slug}`} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
         <motion.article
-          whileHover={{ y: -5 }}
-          transition={{ duration: 0.25 }}
+          whileHover={{ y: -8, scale: 1.015 }}
+          transition={{ duration: 0.3, ease: [0.22,1,0.36,1] }}
+          className="card-glow"
           style={{
             height: '100%',
             display: 'flex',
@@ -166,11 +167,11 @@ export default function CaseStudyCard({ study, index }) {
             border: '1px solid rgba(194,98,45,0.14)',
             boxShadow: '0 2px 18px rgba(194,98,45,0.06)',
             cursor: 'pointer',
-            transition: 'box-shadow 0.3s, border-color 0.3s',
+            transition: 'box-shadow 0.35s, border-color 0.35s',
           }}
           onMouseEnter={e => {
-            e.currentTarget.style.boxShadow = '0 12px 42px rgba(194,98,45,0.14)'
-            e.currentTarget.style.borderColor = 'rgba(194,98,45,0.28)'
+            e.currentTarget.style.boxShadow = '0 20px 60px rgba(194,98,45,0.22), 0 0 0 1.5px rgba(194,98,45,0.35)'
+            e.currentTarget.style.borderColor = 'rgba(194,98,45,0.4)'
           }}
           onMouseLeave={e => {
             e.currentTarget.style.boxShadow = '0 2px 18px rgba(194,98,45,0.06)'
@@ -213,9 +214,9 @@ export default function CaseStudyCard({ study, index }) {
               <span style={{ fontSize: 11, fontWeight: 600, color: '#B89A88', letterSpacing: 0.5 }}>
                 {study.industry}
               </span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, fontWeight: 700, color: '#C2622D' }}>
+              <span className="arrow-bounce" style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 13, fontWeight: 700, color: '#C2622D' }}>
                 Read more
-                <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" style={{ transition: 'transform 0.2s' }}>
                   <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
