@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Headline */}
         <motion.h1 variants={up} initial="hidden" animate="show" custom={0.1}
-          style={{ fontFamily:"'Montserrat', sans-serif", fontSize:'clamp(28px,4vw,48px)', fontWeight:900, lineHeight:1.1, letterSpacing:'-1.5px', marginBottom:32, color:'#1A0F0A' }}>
+          style={{ fontFamily:"'Montserrat', sans-serif", fontSize:'clamp(38px,5.5vw,72px)', fontWeight:900, lineHeight:1.1, letterSpacing:'-2.5px', marginBottom:32, color:'#1A0F0A' }}>
           We Build & Deploy{' '}
           <span style={{ color:'#C2622D' }}>Intelligent</span>
           {' '}
